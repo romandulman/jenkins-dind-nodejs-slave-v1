@@ -1,7 +1,17 @@
 FROM jenkins/ssh-slave
 
+LABEL "com.example.vendor"="OPOTEL Ltd" \
+    version="1.0" \
+    maintainer="dev@opotel.com" \
+    description="Build, Test and Deploy as docker image Node.js projects"
+    
 RUN curl -sSL https://get.docker.com/ | sh
 RUN curl -sL https://deb.nodesource.com/setup_11.x -o nodesource_setup.sh && bash nodesource_setup.sh
 RUN apt-get install -y nodejs
-RUN npm install -g typescript && npm -g install selenium-node-webdriver && npm -g install karma 
-&& npm -g install mocha && npm install -g cucumber
+RUN npm install -g typescript  
+RUN npm -g install selenium-node-webdriver
+RUN npm -g install karma
+RUN npm -g install mocha
+RUN npm install -g cucumber
+# Optional:
+#RUN npm -g install phantomjs-prebuilt
