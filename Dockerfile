@@ -1,8 +1,8 @@
 FROM jenkins/ssh-slave
 
-LABEL "com.example.vendor"="OPOTEL Ltd" \
+LABEL "org.label-schema.vendor"="OPOTEL ltd" \
     version="1.0" \
-    maintainer="dev@opotel.com" \
+    maintainer="roman.dulman@opotel.com" \
     description="Build, Test and Deploy as docker image Node.js projects"
     
 RUN curl -sSL https://get.docker.com/ | sh
