@@ -8,9 +8,9 @@ LABEL "org.label-schema.vendor"="OPOTEL ltd" \
 RUN curl -sSL https://get.docker.com/ | sh
 RUN curl -sL https://deb.nodesource.com/setup_12.x -o nodesource_setup.sh && bash nodesource_setup.sh
 RUN apt-get install -y nodejs
-RUN npm install -g typescript  
-RUN npm -g install selenium-node-webdriver
-RUN npm -g install karma
-RUN npm -g install mocha
-RUN npm -g install chai
+RUN npm -g install typescript 
+RUN npm -g install karma 
+RUN npm -g install mocha 
+RUN npm -g install chai 
 RUN npm -g install cucumber
+RUN npm -g install selenium-node-webdriver 
